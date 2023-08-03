@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		1580A1342A781580006F50BE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A1332A781580006F50BE /* AppDelegate.swift */; };
 		1580A1362A781580006F50BE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A1352A781580006F50BE /* SceneDelegate.swift */; };
-		1580A1382A781580006F50BE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A1372A781580006F50BE /* ViewController.swift */; };
+		1580A1382A781580006F50BE /* Anasayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A1372A781580006F50BE /* Anasayfa.swift */; };
 		1580A13B2A781580006F50BE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1580A1392A781580006F50BE /* Main.storyboard */; };
 		1580A13D2A781581006F50BE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1580A13C2A781581006F50BE /* Assets.xcassets */; };
 		1580A1402A781581006F50BE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1580A13E2A781581006F50BE /* LaunchScreen.storyboard */; };
+		1580A14C2A781B12006F50BE /* KisiKayit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A14B2A781B12006F50BE /* KisiKayit.swift */; };
+		1580A14E2A781B28006F50BE /* KisiDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A14D2A781B28006F50BE /* KisiDetay.swift */; };
+		1580A1502A783048006F50BE /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A14F2A783048006F50BE /* Kisiler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1580A1302A781580006F50BE /* KisilerUygulamasi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KisilerUygulamasi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1580A1332A781580006F50BE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1580A1352A781580006F50BE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1580A1372A781580006F50BE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1580A1372A781580006F50BE /* Anasayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Anasayfa.swift; sourceTree = "<group>"; };
 		1580A13A2A781580006F50BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1580A13C2A781581006F50BE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1580A13F2A781581006F50BE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1580A1412A781581006F50BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1580A14B2A781B12006F50BE /* KisiKayit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayit.swift; sourceTree = "<group>"; };
+		1580A14D2A781B28006F50BE /* KisiDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetay.swift; sourceTree = "<group>"; };
+		1580A14F2A783048006F50BE /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +62,50 @@
 		1580A1322A781580006F50BE /* KisilerUygulamasi */ = {
 			isa = PBXGroup;
 			children = (
+				1580A1482A781622006F50BE /* ui */,
 				1580A1332A781580006F50BE /* AppDelegate.swift */,
 				1580A1352A781580006F50BE /* SceneDelegate.swift */,
-				1580A1372A781580006F50BE /* ViewController.swift */,
+				1580A1472A78160A006F50BE /* data */,
 				1580A1392A781580006F50BE /* Main.storyboard */,
 				1580A13C2A781581006F50BE /* Assets.xcassets */,
 				1580A13E2A781581006F50BE /* LaunchScreen.storyboard */,
 				1580A1412A781581006F50BE /* Info.plist */,
 			);
 			path = KisilerUygulamasi;
+			sourceTree = "<group>";
+		};
+		1580A1472A78160A006F50BE /* data */ = {
+			isa = PBXGroup;
+			children = (
+				1580A14A2A781647006F50BE /* entity */,
+			);
+			path = data;
+			sourceTree = "<group>";
+		};
+		1580A1482A781622006F50BE /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				1580A1492A78163A006F50BE /* views */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		1580A1492A78163A006F50BE /* views */ = {
+			isa = PBXGroup;
+			children = (
+				1580A1372A781580006F50BE /* Anasayfa.swift */,
+				1580A14B2A781B12006F50BE /* KisiKayit.swift */,
+				1580A14D2A781B28006F50BE /* KisiDetay.swift */,
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		1580A14A2A781647006F50BE /* entity */ = {
+			isa = PBXGroup;
+			children = (
+				1580A14F2A783048006F50BE /* Kisiler.swift */,
+			);
+			path = entity;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +179,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1580A1382A781580006F50BE /* ViewController.swift in Sources */,
+				1580A14C2A781B12006F50BE /* KisiKayit.swift in Sources */,
+				1580A14E2A781B28006F50BE /* KisiDetay.swift in Sources */,
+				1580A1382A781580006F50BE /* Anasayfa.swift in Sources */,
 				1580A1342A781580006F50BE /* AppDelegate.swift in Sources */,
 				1580A1362A781580006F50BE /* SceneDelegate.swift in Sources */,
+				1580A1502A783048006F50BE /* Kisiler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
