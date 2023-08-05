@@ -16,6 +16,7 @@
 		1580A14C2A781B12006F50BE /* KisiKayit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A14B2A781B12006F50BE /* KisiKayit.swift */; };
 		1580A14E2A781B28006F50BE /* KisiDetay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A14D2A781B28006F50BE /* KisiDetay.swift */; };
 		1580A1502A783048006F50BE /* Kisiler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1580A14F2A783048006F50BE /* Kisiler.swift */; };
+		15F5518C2A7C10170024905A /* KisilerHucre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15F5518B2A7C10170024905A /* KisilerHucre.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		1580A14B2A781B12006F50BE /* KisiKayit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiKayit.swift; sourceTree = "<group>"; };
 		1580A14D2A781B28006F50BE /* KisiDetay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisiDetay.swift; sourceTree = "<group>"; };
 		1580A14F2A783048006F50BE /* Kisiler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Kisiler.swift; sourceTree = "<group>"; };
+		15F5518B2A7C10170024905A /* KisilerHucre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KisilerHucre.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		1580A1482A781622006F50BE /* ui */ = {
 			isa = PBXGroup;
 			children = (
+				15F5518A2A7C0FDA0024905A /* tableview */,
 				1580A1492A78163A006F50BE /* views */,
 			);
 			path = ui;
@@ -106,6 +109,14 @@
 				1580A14F2A783048006F50BE /* Kisiler.swift */,
 			);
 			path = entity;
+			sourceTree = "<group>";
+		};
+		15F5518A2A7C0FDA0024905A /* tableview */ = {
+			isa = PBXGroup;
+			children = (
+				15F5518B2A7C10170024905A /* KisilerHucre.swift */,
+			);
+			path = tableview;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,6 +195,7 @@
 				1580A1382A781580006F50BE /* Anasayfa.swift in Sources */,
 				1580A1342A781580006F50BE /* AppDelegate.swift in Sources */,
 				1580A1362A781580006F50BE /* SceneDelegate.swift in Sources */,
+				15F5518C2A7C10170024905A /* KisilerHucre.swift in Sources */,
 				1580A1502A783048006F50BE /* Kisiler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

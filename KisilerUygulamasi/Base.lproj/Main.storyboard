@@ -16,20 +16,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Dd-Q7-2me">
-                                <rect key="frame" x="162.33333333333334" y="408.66666666666669" width="68.666666666666657" height="35"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Detay"/>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="uCR-cw-gxo">
+                                <rect key="frame" x="0.0" y="163" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
-                                    <action selector="buttonDetay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VLB-LX-16S"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Fsc-x3-iMv"/>
                                 </connections>
-                            </button>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="tc2-LD-sG7">
+                                <rect key="frame" x="0.0" y="219.33333333333331" width="393" height="549.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="kisilerHucre" id="VWK-mM-aXw" customClass="KisilerHucre" customModule="KisilerUygulamasi" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VWK-mM-aXw" id="HzJ-EX-2Tf">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="hMS-Bv-dud">
+                                                    <rect key="frame" x="36" y="15" width="59" height="70"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2a-Z3-LgI">
+                                                            <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2hA-o3-DQS">
+                                                            <rect key="frame" x="0.0" y="46" width="59" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hMS-Bv-dud" firstAttribute="centerY" secondItem="HzJ-EX-2Tf" secondAttribute="centerY" id="FVG-qe-Srk"/>
+                                                <constraint firstItem="hMS-Bv-dud" firstAttribute="leading" secondItem="HzJ-EX-2Tf" secondAttribute="leadingMargin" constant="16" id="noL-XK-vMT"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelKisiAd" destination="X2a-Z3-LgI" id="1yc-Zv-8IF"/>
+                                            <outlet property="labelKisiTel" destination="2hA-o3-DQS" id="OtS-Z9-QLX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="5Dd-Q7-2me" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="60e-cT-tXz"/>
-                            <constraint firstItem="5Dd-Q7-2me" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ql8-I0-di0"/>
+                            <constraint firstItem="uCR-cw-gxo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9TD-la-G9R"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tc2-LD-sG7" secondAttribute="bottom" id="EBy-ZZ-z7e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tc2-LD-sG7" secondAttribute="trailing" id="OZ1-lv-Mbb"/>
+                            <constraint firstItem="uCR-cw-gxo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="UAc-oj-CkA"/>
+                            <constraint firstItem="tc2-LD-sG7" firstAttribute="top" secondItem="uCR-cw-gxo" secondAttribute="bottom" id="Z3Y-uI-drM"/>
+                            <constraint firstAttribute="trailing" secondItem="uCR-cw-gxo" secondAttribute="trailing" id="dPs-8Y-O4A"/>
+                            <constraint firstItem="tc2-LD-sG7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zNu-SF-bay"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
@@ -42,6 +87,8 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="kisilerTableView" destination="tc2-LD-sG7" id="Sop-vz-K2D"/>
+                        <outlet property="searchBar" destination="uCR-cw-gxo" id="Lub-dy-kA3"/>
                         <segue destination="tqH-4a-jvQ" kind="show" identifier="toDetay" id="QAh-EA-tIT"/>
                     </connections>
                 </viewController>
