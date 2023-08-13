@@ -12,20 +12,21 @@ class Anasayfa : UIViewController{
     @IBOutlet weak var searchBar: UISearchBar!
     
     var kisilerListesi = [Kisiler]()
-    
+    var viewModel = AnasayfaViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
         //burdaki tableview ile aşağıdaki kodlar senkronize çalışması için
         kisilerTableView.delegate = self
         kisilerTableView.dataSource = self
-        let k1 = Kisiler(kisi_id: 1, kisi_ad: "Kader", kisi_tel: "0908")
-        let k2 = Kisiler(kisi_id: 2, kisi_ad: "Derya", kisi_tel: "34354")
-        let k3 = Kisiler(kisi_id: 3, kisi_ad: "Deniz", kisi_tel: "4567")
-        kisilerListesi.append(k1)
-        kisilerListesi.append(k2)
-        kisilerListesi.append(k3)
-
+        _ = viewModel.kisilerListesi.subscribe(onNext: {
+            liste in
+            self.kisilerListesi = liste
+            self.kisilerTableView.reloadData()
+        })
+    }
+    override func viewWillAppear(_ animated: Bool) {//sayfa her göründüğünde çalışıyor
+        viewModel.kisilerYukle()
     }
 
     
@@ -48,7 +49,8 @@ class Anasayfa : UIViewController{
 extension Anasayfa: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Kişi Ara: \(searchText)")
+        viewModel.ara(aramaKelimesi: searchText)
+        
     }
 }
 //MARK: - Anasayfa
@@ -84,7 +86,7 @@ extension  Anasayfa: UITableViewDataSource,UITableViewDelegate{
             alert.addAction(iptalAction)
             let evetAction = UIAlertAction(title: "Evet", style:.destructive){
                 action in
-                print("Kişi sil : \(kisi.kisi_id!)")
+                self.viewModel.sil(kisi_id: kisi.kisi_id!)
             }
             alert.addAction(evetAction)
             self.present(alert, animated: true)
